@@ -4,12 +4,13 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { css, cx } from "styled-system/css";
 import { flex } from "styled-system/patterns";
-import { link } from "styled-system/recipes";
+import { button, link } from "styled-system/recipes";
 import Link from "next/link";
 
 import { ThemeToggle } from "~/components/layout/theme-toggle";
 import { BLinkingEye } from "~/components/layout/blinking-eye";
 import { MobileNavbar } from "~/components/layout/mobile-navbar";
+import { FaGithub } from "react-icons/fa";
 
 export function Header() {
   const pathname = usePathname();
@@ -115,13 +116,39 @@ export function Header() {
         })}
       >
         <a
-          href="https://github.com/anubra266"
+          href="https://x.com/anubra266"
           target="_blank"
           className={cx(link(), css({ hideBelow: "md" }))}
         >
           @anubra266
         </a>
-        <ThemeToggle />
+        <div
+          className={flex({
+            align: "center",
+            gap: "1",
+          })}
+        >
+          <a
+            href="https://releases.anubra266.dev/"
+            target="_blank"
+            className={cx(
+              button({
+                variant: "secondary",
+              }),
+              css({
+                cursor: "pointer",
+                w: "8",
+                h: "8",
+                p: "1.5",
+              })
+            )}
+          >
+            <FaGithub />
+          </a>
+
+          <ThemeToggle />
+        </div>
+
         <MobileNavbar />
       </div>
     </nav>
