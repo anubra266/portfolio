@@ -51,9 +51,10 @@ export function Hero() {
               })
             )}
           >
-            Hi again 👋🏾, I'm a software engineer currently taking my masters in
-            computer science, at{" "}
-            <u>Maharishi International University, IA, USA.</u>
+            I'm a frontend engineer with a passion for building reliable,
+            scalable, and tested software that meets industry standards. My
+            focus extends beyond the code, as I care deeply about user
+            experience, accessibility, and improving developer workflows.
           </p>
           <p
             className={cx(
@@ -65,7 +66,8 @@ export function Hero() {
               })
             )}
           >
-            I'm passionate about <u>open source</u> and developer experience.
+            I also believe in the power of <u>open source</u> collaboration to
+            drive innovation and create solutions that matter.
           </p>
 
           <HeroButton />

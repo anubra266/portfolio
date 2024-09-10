@@ -44,8 +44,10 @@ export function Hero() {
             })
           )}
         >
-          Full Stack Developer and open source enthusiast. Maybe AI <i>guru</i>{" "}
-          soon. Gotta keep up with Devin. 😉
+          Frontend Developer and open source enthusiast I create accessible,
+          forward-thinking digital experiences. With a passion for balancing
+          innovation with inclusivity, ensuring that every user enjoys a
+          seamless interaction.
         </p>
         <div
           className={css({
@@ -55,7 +57,7 @@ export function Hero() {
           })}
         >
           <a
-            href="https://x.com/anubra266"
+            href="https://linkedin.com/in/anubra266"
             target="_blank"
             className={button({ variant: "primary" })}
           >
