@@ -22,13 +22,10 @@ export const button = defineRecipe({
         color: { base: "white", _dark: { base: "black", _hover: "black/87" } },
       },
       secondary: {
-        bg: "grey.00",
-        _dark: { bg: "grey.08", _hover: "grey.09" },
-        _light: {
-          boxShadow: { _hover: "01" },
-          backdropFilter: { base: "blur(100)", _hover: "none" },
+        _hover: {
+          color: { base: "hsl(0 0% 9%)", _dark: "hsl(0 0% 100%)" },
+          bg: { base: "hsl(0 0% 94.1%)", _dark: "hsl(0 0% 15%)" },
         },
-        color: { base: "black/87", _dark: "white" },
       },
     },
   },
