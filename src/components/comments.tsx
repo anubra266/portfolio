@@ -18,7 +18,7 @@ export const Comments = () => {
       category="Announcements"
       category-id="DIC_kwDOLZBwKc4CkFk2"
       mapping="pathname"
-      strict="1"
+      strict="0"
       reactionsEnabled="1"
       emitMetadata="0"
       inputPosition="top"

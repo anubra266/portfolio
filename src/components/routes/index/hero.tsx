@@ -60,6 +60,7 @@ export function Hero() {
             href="https://linkedin.com/in/anubra266"
             target="_blank"
             className={button({ variant: "primary" })}
+            rel="noreferrer"
           >
             Say Hi 👋
           </a>
@@ -87,7 +88,7 @@ export function Hero() {
       <div
         className={circle({
           size: "[464px]",
-          bg: "grey.06/50",
+          bg: "bg.circle",
           _light: {
             display: "none",
           },

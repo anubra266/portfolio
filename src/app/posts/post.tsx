@@ -3,7 +3,7 @@ import { css, cx } from "styled-system/css";
 import { center, flex, linkOverlay, stack } from "styled-system/patterns";
 import { tag, text } from "styled-system/recipes";
 import DateFormatter from "~/components/global/date-formatter";
-import { Post } from "~/lib/api";
+import type { Post } from "~/lib/api";
 
 export function PostCard({ post }: { post: Post }) {
   return (
@@ -14,7 +14,10 @@ export function PostCard({ post }: { post: Post }) {
           pos: "relative",
           bg: {
             base: "white/50",
-            _dark: { base: "grey.08", _hover: "grey.09" },
+            _dark: {
+              base: "hsl(0 0% 12.9% / .5)",
+              _hover: "hsl(0 0% 12.9% / .7)",
+            },
           },
           rounded: "[32px]",
           p: "6",
@@ -26,7 +29,7 @@ export function PostCard({ post }: { post: Post }) {
     >
       <div
         className={center({
-          bg: { base: "grey.005/60", _dark: "grey.06/50" },
+          bg: "bg.circle",
           maxH: "[352px]",
           w: "full",
           rounded: "[32px]",

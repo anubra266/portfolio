@@ -56,7 +56,7 @@ export function Hero() {
         <div
           className={circle({
             size: "[464px]",
-            bg: { base: "grey.005/60", _dark: "grey.06/50" },
+            bg: "bg.circle",
             backdropFilter: "[blur(150)]",
             hideBelow: "lg",
           })}

@@ -47,10 +47,19 @@ export default defineConfig({
             subtle: {
               value: { base: "{colors.gray.200}", _dark: "{colors.grey.06}" },
             },
+            circle: {
+              value: {
+                base: "color-mix(in srgb, #F5F5F5 60%, transparent)",
+                _dark: "hsl(0 0% 12.9% / .5)",
+              },
+            },
           },
           fg: {
             default: {
-              value: { base: "{colors.black/87}", _dark: "rgba(250, 250, 250, 0.9)" },
+              value: {
+                base: "{colors.black/87}",
+                _dark: "rgba(250, 250, 250, 0.9)",
+              },
             },
             subtle: {
               value: { base: "{colors.black/60}", _dark: "rgb(153, 153, 153)" },
