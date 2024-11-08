@@ -8,7 +8,7 @@ export const tag = defineRecipe({
     px: "3",
     py: "1.5",
     fontWeight: "medium",
-    bg: { base: "grey.005/80", _dark: "grey.09" },
+    bg: { base: "grey.005/80", _dark: "hsl(0 0% 15%)" },
     w: "fit",
   },
 });
