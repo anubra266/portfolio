@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "~/lib/api";
 import markdownToHtml from "~/lib/markdownToHtml";
@@ -9,6 +9,7 @@ import { tag, text } from "styled-system/recipes";
 import { Blob6 } from "~/components/layout/blobs/blob6";
 import { PostCard } from "~/app/posts/post";
 import { Blob7 } from "~/components/layout/blobs/blob7";
+import { Comments } from "~/components/comments";
 
 export default async function Post({ params }: Params) {
   const post = getPostBySlug(params.slug);
@@ -118,6 +119,8 @@ export default async function Post({ params }: Params) {
               _dark: { display: "none" },
             }}
           />
+
+          <Comments />
         </div>
 
         {posts.length > 0 && (
@@ -172,7 +175,7 @@ export default async function Post({ params }: Params) {
 const markdown = cva({
   base: {
     mt: "20",
-    color: "fg.subtle",
+    color: "fg.default",
     fontSize: "[1.0625rem]",
     letterSpacing: "wider",
 
@@ -271,9 +274,24 @@ const markdown = cva({
       "& p": { p: "0", m: "0" },
     },
 
-    "& pre > code": { rounded: "lg", fontSize: "sm" },
+    // "& pre > code": { rounded: "lg", fontSize: "sm" },
 
-    "& :where(code, kbd, tt, samp)": {
+    "& code": {
+      fontFamily: "[var(--font-mono)]",
+      fontWeight: "medium",
+    },
+
+    "& pre": {
+      p: "4",
+      rounded: "lg",
+      overflowX: "auto",
+      my: "4",
+      borderStyle: "solid",
+      borderWidth: "[1px]",
+      borderColor: { base: "[rgb(229, 229, 229)]", _dark: "[rgb(36, 36, 36)]" },
+    },
+
+    "& :where(kbd, tt, samp)": {
       fontWeight: "medium",
       fontSize: "sm",
       fontFamily: "[var(--font-mono)]",

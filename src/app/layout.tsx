@@ -1,8 +1,13 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Poppins, Fira_Code } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 
+const fira = Fira_Code({ subsets: ["latin"] });
 const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 import "./globals.css";
 import { Header } from "~/components/layout/header";
@@ -18,8 +23,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: `Abraham A. Aremu (aka anubra266) - Software Engineer and Open Source Enthusiast`,
-  description: `Software engineer passionate about UI, accessibility and DX.`,
+  title:
+    "Abraham A. Aremu (aka anubra266) - Software Engineer and Open Source Enthusiast",
+  description: "Software engineer passionate about UI, accessibility and DX.",
   openGraph: {
     images: ["https://portfolio-anubra266.vercel.app/api/og"],
   },
@@ -74,7 +80,9 @@ export default function RootLayout({
         style={
           {
             "--inter": inter.style.fontFamily,
-          } as any
+            "--body": poppins.style.fontFamily,
+            "--font-mono": fira.style.fontFamily,
+          } as object
         }
       >
         <Providers>

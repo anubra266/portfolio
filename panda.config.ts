@@ -39,7 +39,7 @@ export default defineConfig({
         colors: {
           bg: {
             canvas: {
-              value: { base: "{colors.white}", _dark: "{colors.grey.08}" },
+              value: { base: "{colors.white}", _dark: "hsl(0 0% 2%)" },
             },
             default: {
               value: { base: "{colors.white}", _dark: "{colors.grey.10}" },
@@ -50,10 +50,10 @@ export default defineConfig({
           },
           fg: {
             default: {
-              value: { base: "{colors.black/87}", _dark: "{colors.white/100}" },
+              value: { base: "{colors.black/87}", _dark: "rgba(250, 250, 250, 0.9)" },
             },
             subtle: {
-              value: { base: "{colors.black/60}", _dark: "{colors.white/70}" },
+              value: { base: "{colors.black/60}", _dark: "rgb(153, 153, 153)" },
             },
           },
         },
