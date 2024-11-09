@@ -29,7 +29,6 @@ export const metadata: Metadata = {
   openGraph: {
     images: ["https://portfolio-anubra266.vercel.app/api/og"],
   },
-  manifest: "/favicon/site.webmanifest",
   metadataBase: new URL("https://anubra266.dev"),
 
   icons: [

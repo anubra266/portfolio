@@ -43,8 +43,8 @@ export default async function Post({ params }: Params) {
           >
             <div className={stack({ gap: "7" })}>
               <div className={flex({ gap: "2" })}>
-                {post.tags.map((t, i) => (
-                  <span key={i} className={tag()}>
+                {post.tags.map((t) => (
+                  <span key={t} className={tag()}>
                     {t}
                   </span>
                 ))}
@@ -151,8 +151,8 @@ export default async function Post({ params }: Params) {
               </p>
 
               <div className={grid({ gap: "2", columns: { base: 1, md: 2 } })}>
-                {posts.map((p, i) => (
-                  <PostCard key={i} post={p} />
+                {posts.map((p) => (
+                  <PostCard key={p.title} post={p} />
                 ))}
               </div>
             </div>
@@ -274,8 +274,6 @@ const markdown = cva({
       "& p": { p: "0", m: "0" },
     },
 
-    // "& pre > code": { rounded: "lg", fontSize: "sm" },
-
     "& code": {
       fontFamily: "[var(--font-mono)]",
       fontWeight: "medium",
@@ -319,9 +317,11 @@ export function generateMetadata({ params }: Params): Metadata {
   const title = `${post.title} | Abraham's mind`;
 
   return {
+    title,
+    description: post.excerpt,
     openGraph: {
-      title,
       images: [post.ogImage.url],
+      description: post.excerpt,
     },
   };
 }

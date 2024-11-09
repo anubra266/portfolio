@@ -7,6 +7,7 @@ export function ThemeToggle() {
 
   return (
     <button
+      type="button"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       className={cx(
         button({
@@ -21,8 +22,8 @@ export function ThemeToggle() {
       )}
     >
       <svg
-        width="auto"
-        height="auto"
+        width="1.25em"
+        height="1.25em"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -37,17 +38,17 @@ export function ThemeToggle() {
           "& .moon": { stroke: { base: "transparent", _dark: "white" } },
         })}
       >
-        <circle className="sun" cx="12" cy="12" r="4"></circle>
-        <path className="sun" d="M12 2v2"></path>
-        <path className="sun" d="M12 20v2"></path>
-        <path className="sun" d="m4.93 4.93 1.41 1.41"></path>
-        <path className="sun" d="m17.66 17.66 1.41 1.41"></path>
-        <path className="sun" d="M2 12h2"></path>
-        <path className="sun" d="M20 12h2"></path>
-        <path className="sun" d="m6.34 17.66-1.41 1.41"></path>
-        <path className="sun" d="m19.07 4.93-1.41 1.41"></path>
-
-        <path className="moon" d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+        <title>Toggle theme</title>
+        <circle className="sun" cx="12" cy="12" r="4" />
+        <path className="sun" d="M12 2v2" />
+        <path className="sun" d="M12 20v2" />
+        <path className="sun" d="m4.93 4.93 1.41 1.41" />
+        <path className="sun" d="m17.66 17.66 1.41 1.41" />
+        <path className="sun" d="M2 12h2" />
+        <path className="sun" d="M20 12h2" />
+        <path className="sun" d="m6.34 17.66-1.41 1.41" />
+        <path className="sun" d="m19.07 4.93-1.41 1.41" />
+        <path className="moon" d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
       </svg>
     </button>
   );
