@@ -11,6 +11,8 @@ export const Comments = () => {
     dark: "transparent_dark",
   };
 
+  const styles = `https://anubra266.dev/css/comments.${themes[theme as keyof typeof themes]}.css`;
+
   return (
     <Giscus
       repo="anubra266/portfolio"
@@ -22,7 +24,7 @@ export const Comments = () => {
       reactionsEnabled="1"
       emitMetadata="0"
       inputPosition="top"
-      theme={themes[theme as keyof typeof themes]}
+      theme={styles}
       lang="en"
     />
   );
