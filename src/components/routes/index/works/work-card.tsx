@@ -96,7 +96,7 @@ export function WorkCard({ work }: { work: (typeof WORKS)[number] }) {
         </p>
         <div className={flex({ gap: "2" })}>
           {work.tags.map((t, i) => (
-            <span key={i} className={tag()}>
+            <span key={t} className={tag()}>
               {t}
             </span>
           ))}

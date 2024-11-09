@@ -10,6 +10,7 @@
     "@ark-ui/anatomy": "^2.3.1",
     "@ark-ui/react": "^2.2.3",
     "@giscus/react": "^3.0.0",
+    "@splitbee/web": "^0.3.0",
     "@vercel/analytics": "^1.2.2",
     "date-fns": "^3.3.1",
     "gray-matter": "^4.0.3",
