@@ -11,7 +11,7 @@ export const Comments = () => {
     dark: "transparent_dark",
   };
 
-  const styles = `https://anubra266.dev/css/comments.${themes[theme as keyof typeof themes]}.css`;
+  const styles = `https://www.anubra266.dev/css/comments.${themes[theme as keyof typeof themes]}.css`;
 
   return (
     <Giscus
