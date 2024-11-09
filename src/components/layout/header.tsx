@@ -23,11 +23,18 @@ export function Header() {
       className={flex({
         align: "center",
         justify: "space-between",
-        mt: { base: "10", lg: "[60px]" },
+        mt: { base: "6", lg: "[60px]" },
         pb: "1",
         px: "[var(--padding)]",
         maxW: "[var(--maxW)]",
         w: "full",
+        position: "sticky",
+        top: "0",
+        backdropFilter: "[blur(16px)]",
+        bg: "bg.canvas/70",
+        zIndex: "[9999]",
+        rounded: "xl",
+        transition: "[all 0.2s ease-in-out]",
       })}
     >
       <div

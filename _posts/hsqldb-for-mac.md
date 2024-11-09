@@ -95,9 +95,9 @@ You should see the following screen:
 In the Database Manager:
 
 - Setting Name: `trainingdb`
-- Type: Select HSQL Database Engine Server.
-- Driver: Ensure it says `org.hsqldb.jdbc.JDBCDriver`.
-- URL: Enter `jdbc:hsqldb:hsql://localhost/trainingdb`.
+- Type: Select `HSQL Database Engine Server`.
+- Driver: Ensure it says `org.hsqldb.jdbc.JDBCDriver`
+- URL: Enter `jdbc:hsqldb:hsql://localhost/trainingdb`
 - User: `SA` (default admin user).
 - Password: Leave blank (unless you’ve set one).
 

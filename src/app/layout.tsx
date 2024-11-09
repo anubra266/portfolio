@@ -95,8 +95,9 @@ export default function RootLayout({
                 base: "spacing.4",
                 md: "spacing.7",
                 lg: "spacing.10",
-                xl: "spacing.0",
+                xl: "spacing.4",
               },
+              position: "relative",
             })}
           >
             <Header />

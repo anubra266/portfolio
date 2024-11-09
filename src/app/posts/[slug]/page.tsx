@@ -277,6 +277,17 @@ const markdown = cva({
     "& code": {
       fontFamily: "[var(--font-mono)]",
       fontWeight: "medium",
+      fontSize: "sm",
+    },
+
+    "& :not(.shiki) > code, & :not(.shiki) code": {
+      fontSize: "xs",
+      fontWeight: "normal",
+      p: "[3px]",
+      border: "[solid 1px]",
+      borderColor: { base: "[hsl(0 0% 89.8%)]", _dark: "[hsl(0 0% 14%)]" },
+      borderRadius: "sm",
+      bg: { base: "[hsl(0 0% 96.1%)]", _dark: "[hsl(0 0% 8%)]" },
     },
 
     "& pre": {
