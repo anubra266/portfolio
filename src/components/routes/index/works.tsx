@@ -4,6 +4,7 @@ import { text } from "styled-system/recipes";
 import { Blob3 } from "~/components/layout/blobs/blob3";
 import { ChocUI } from "~/components/routes/index/works/choc-ui";
 import { WorkCard } from "~/components/routes/index/works/work-card";
+import WORKS from "./works.json";
 
 export function Works() {
   return (
@@ -52,7 +53,7 @@ export function Works() {
           </p>
           <div className={grid({ gap: "2", columns: { base: 1, md: 2 } })}>
             {WORKS.map((work, i) => (
-              <WorkCard key={i} work={work} />
+              <WorkCard key={work.title} work={work} />
             ))}
           </div>
         </div>
@@ -60,30 +61,3 @@ export function Works() {
     </div>
   );
 }
-
-export const WORKS = [
-  {
-    id: "zagjs",
-    title: "Zag.js (Maintainer)",
-    description:
-      "Zag is a collection of framework-agnostic UI component patterns like accordion, menu, and dialog that can be used to build design systems for React, Vue and Solid.js",
-    tags: ["State Machines", "Component library"],
-    url: "https://zagjs.com",
-  },
-  {
-    id: "pandacss",
-    title: "Panda CSS (Maintainer)",
-    description:
-      "CSS-in-JS with build time generated styles, RSC compatible, multi-variant support, and best-in-class developer experience",
-    tags: ["Styling", "Design Systems"],
-    url: "https://panda-css.com/",
-  },
-  {
-    id: "panda-playground",
-    title: "Panda CSS Playground",
-    description:
-      "Playground to experiment with Panda CSS and generate styles for your project",
-    tags: ["DX", "Styling"],
-    url: "https://play.panda-css.com/",
-  },
-];

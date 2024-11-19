@@ -1,7 +1,7 @@
 import { css, cx } from "styled-system/css";
 import { center, flex, linkOverlay, stack } from "styled-system/patterns";
-import { link, tag, text } from "styled-system/recipes";
-import type { WORKS } from "~/components/routes/index/works";
+import { tag, text } from "styled-system/recipes";
+import type WORKS from "../works.json";
 
 export function WorkCard({ work }: { work: (typeof WORKS)[number] }) {
   return (
@@ -58,6 +58,8 @@ export function WorkCard({ work }: { work: (typeof WORKS)[number] }) {
         })}
       >
         <a
+          target="_blank"
+          rel="noopener noreferrer"
           href={work.url}
           className={cx(
             text({ variant: "24" }),
