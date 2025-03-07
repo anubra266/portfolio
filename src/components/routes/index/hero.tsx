@@ -44,7 +44,7 @@ export function Hero() {
             })
           )}
         >
-          Frontend Developer and open source enthusiast I create accessible,
+          Product Developer and open source enthusiast I create accessible,
           forward-thinking digital experiences. With a passion for balancing
           innovation with inclusivity, ensuring that every user enjoys a
           seamless interaction.
