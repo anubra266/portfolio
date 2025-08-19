@@ -30,6 +30,18 @@
         "url": "https://play.panda-css.com/"
     },
     {
+        "id": "tark-ui",
+        "title": "Tark UI",
+        "description": "Beautiful UI components built with Ark UI and Tailwind CSS.",
+        "tags": [
+            "Components",
+            "Design Systems",
+            "Tailwind CSS",
+            "Ark UI"
+        ],
+        "url": "https://tark-ui.com"
+    },
+    {
         "id": "emoji-palette",
         "title": "Emoji Palette",
         "description": "Get color palettes from emojis",
