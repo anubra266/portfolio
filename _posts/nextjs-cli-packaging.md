@@ -3,7 +3,7 @@ title: "How to Package a Next.js App as a CLI Command"
 excerpt: "Building CLI tools like 'drizzle studio' or 'mastra dev' that launch web interfaces? Learn how to package a Next.js app as an npm package that can be programmatically started by your CLI tool. I'll walk you through standalone builds, npm configuration, and programmatic server spawning."
 tags: ["nextjs", "cli", "nodejs", "npm", "standalone", "packaging"]
 coverImage: "/assets/blog/nextjs-cli-packaging/cover.png"
-date: "2024-12-19T10:30:00.000Z"
+date: "2025-09-10T10:30:00.000Z"
 ogImage:
   url: "/assets/blog/nextjs-cli-packaging/cover.png"
 ---
