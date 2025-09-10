@@ -4,14 +4,14 @@ import Giscus from "@giscus/react";
 import { useTheme } from "next-themes";
 
 export const Comments = () => {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   const themes = {
     light: "light",
     dark: "transparent_dark",
   };
 
-  const styles = `https://www.anubra266.dev/css/comments.${themes[theme as keyof typeof themes]}.css`;
+  const styles = `https://www.anubra266.dev/css/comments.${themes[resolvedTheme as keyof typeof themes]}.css`;
 
   return (
     <Giscus
