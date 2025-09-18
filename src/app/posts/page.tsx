@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { css } from "styled-system/css";
 import { getAllPosts } from "~/lib/api";
 import { Hero } from "~/app/posts/hero";
@@ -5,6 +6,27 @@ import { NoThoughts } from "~/app/posts/no-thoughts";
 import { PostCard } from "~/app/posts/post";
 import { grid } from "styled-system/patterns";
 import { Blob5 } from "~/components/layout/blobs/blob5";
+
+export const metadata: Metadata = {
+  title: "Blog Posts - Abraham's Mind",
+  description:
+    "Technical blog posts about frontend development, UI engineering, accessibility, developer experience, and open source projects by Abraham A. Aremu (anubra266).",
+  openGraph: {
+    title: "Blog Posts - Abraham's Mind",
+    description:
+      "Technical blog posts about frontend development, UI engineering, accessibility, developer experience, and open source projects.",
+    type: "website",
+    url: "https://anubra266.com/posts",
+  },
+  twitter: {
+    title: "Blog Posts - Abraham's Mind",
+    description:
+      "Technical blog posts about frontend development, UI engineering, accessibility, developer experience, and open source projects.",
+  },
+  alternates: {
+    canonical: "https://anubra266.com/posts",
+  },
+};
 
 export default function Index() {
   const posts = getAllPosts();

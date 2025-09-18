@@ -14,6 +14,10 @@ import { Header } from "~/components/layout/header";
 import { Footer } from "~/components/layout/footer";
 import { flex } from "styled-system/patterns";
 import { Providers } from "~/app/providers";
+import {
+  PersonStructuredData,
+  WebsiteStructuredData,
+} from "~/components/structured-data";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -23,13 +27,51 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title:
-    "Abraham A. Aremu (aka anubra266) - Software Engineer and Open Source Enthusiast",
-  description: "Software engineer passionate about UI, accessibility and DX.",
-  openGraph: {
-    images: ["https://portfolio-anubra266.vercel.app/api/og"],
+  title: {
+    default:
+      "Abraham A. Aremu (aka anubra266) - Software Engineer and Open Source Enthusiast",
+    template: "%s | anubra266",
   },
-  metadataBase: new URL("https://anubra266.dev"),
+  description:
+    "Software engineer passionate about UI, accessibility, and developer experience. Creator of Panda CSS, maintainer of Zag.js, building the future of web development.",
+  keywords: [
+    "Abraham Aremu",
+    "anubra266",
+    "software engineer",
+    "frontend developer",
+    "UI engineer",
+    "accessibility",
+    "developer experience",
+    "Panda CSS",
+    "Zag.js",
+    "React",
+    "TypeScript",
+    "CSS-in-JS",
+    "design systems",
+    "open source",
+  ],
+  authors: [{ name: "Abraham A. Aremu", url: "https://anubra266.com" }],
+  creator: "Abraham A. Aremu",
+  publisher: "Abraham A. Aremu",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://anubra266.com",
+    title:
+      "Abraham A. Aremu (aka anubra266) - Software Engineer and Open Source Enthusiast",
+    description:
+      "Software engineer passionate about UI, accessibility, and developer experience. Creator of Panda CSS, maintainer of Zag.js.",
+    siteName: "anubra266",
+    images: [
+      {
+        url: "https://anubra266.com/api/og",
+        width: 1200,
+        height: 630,
+        alt: "Abraham A. Aremu - Software Engineer",
+      },
+    ],
+  },
+  metadataBase: new URL("https://anubra266.com"),
 
   icons: [
     {
@@ -54,12 +96,24 @@ export const metadata: Metadata = {
   ],
   twitter: {
     site: "@anubra266",
+    creator: "@anubra266",
     card: "summary_large_image",
     title:
       "Abraham A. Aremu (aka anubra266) - Software Engineer and Open Source Enthusiast",
-    description: "Software engineer passionate about UI, accessibility and DX.",
-    creator: "@anubra266",
-    images: ["https://portfolio-anubra266.vercel.app/api/og"],
+    description:
+      "Software engineer passionate about UI, accessibility, and developer experience. Creator of Panda CSS, maintainer of Zag.js.",
+    images: ["https://anubra266.com/api/og"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   alternates: {
     types: {
@@ -84,6 +138,8 @@ export default function RootLayout({
           } as object
         }
       >
+        <PersonStructuredData />
+        <WebsiteStructuredData />
         <Providers>
           <div
             className={flex({

@@ -10,6 +10,7 @@ import { Blob6 } from "~/components/layout/blobs/blob6";
 import { PostCard } from "~/app/posts/post";
 import { Blob7 } from "~/components/layout/blobs/blob7";
 import { Comments } from "~/components/comments";
+import { BlogStructuredData } from "~/components/structured-data";
 
 export default async function Post({ params }: Params) {
   const post = getPostBySlug(params.slug);
@@ -25,6 +26,7 @@ export default async function Post({ params }: Params) {
 
   return (
     <main className={css({ mt: "10", w: "full", overflowX: "clip" })}>
+      <BlogStructuredData post={post} />
       <article>
         <div
           className={css({
@@ -326,13 +328,45 @@ export function generateMetadata({ params }: Params): Metadata {
   }
 
   const title = `${post.title} | Abraham's mind`;
+  const canonical = `https://anubra266.com/posts/${post.slug}`;
 
   return {
     title,
     description: post.excerpt,
+    keywords: post.tags.join(", "),
+    authors: [{ name: "Abraham A. Aremu", url: "https://anubra266.com" }],
+    creator: "Abraham A. Aremu",
+    publisher: "Abraham A. Aremu",
     openGraph: {
-      images: [post.ogImage.url],
+      title,
       description: post.excerpt,
+      type: "article",
+      url: canonical,
+      images: [
+        {
+          url: `https://anubra266.com${post.ogImage.url}`,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+      publishedTime: post.date,
+      authors: ["Abraham A. Aremu"],
+      tags: post.tags,
+    },
+    twitter: {
+      card: "summary_large_image",
+      creator: "@anubra266",
+      title,
+      description: post.excerpt,
+      images: [`https://anubra266.com${post.ogImage.url}`],
+    },
+    alternates: {
+      canonical,
+    },
+    robots: {
+      index: true,
+      follow: true,
     },
   };
 }
