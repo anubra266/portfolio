@@ -1,3 +1,4 @@
+/** @type {import('next').NextConfig} */
 module.exports = {
   images: {
     remotePatterns: [
@@ -77,17 +78,6 @@ module.exports = {
           {
             type: "host",
             value: "www.anubra266.dev",
-          },
-        ],
-        destination: "https://anubra266.com/:path*",
-        permanent: true,
-      },
-      {
-        source: "/:path*",
-        has: [
-          {
-            type: "host",
-            value: "www.anubra266.com",
           },
         ],
         destination: "https://anubra266.com/:path*",
