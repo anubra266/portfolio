@@ -20,14 +20,14 @@
         "url": "https://panda-css.com/"
     },
     {
-        "id": "panda-playground",
-        "title": "Panda CSS Playground",
-        "description": "Playground to experiment with Panda CSS and generate styles for your project",
+        "id": "zagripple",
+        "title": "Zag Ripple",
+        "description": "Beautiful, accessible, and performant component library for Ripple JS. Built with Zag.js for maximum flexibility and developer experience.",
         "tags": [
-            "DX",
-            "Styling"
+            "Components",
+            "Component Library"
         ],
-        "url": "https://play.panda-css.com/"
+        "url": "https://zag-ripple.vercel.app/"
     },
     {
         "id": "tark-ui",
@@ -42,6 +42,16 @@
         "url": "https://tark-ui.com"
     },
     {
+        "id": "panda-playground",
+        "title": "Panda CSS Playground",
+        "description": "Playground to experiment with Panda CSS and generate styles for your project",
+        "tags": [
+            "DX",
+            "Styling"
+        ],
+        "url": "https://play.panda-css.com/"
+    },
+    {
         "id": "emoji-palette",
         "title": "Emoji Palette",
         "description": "Get color palettes from emojis",
@@ -50,7 +60,7 @@
             "Styling",
             "Colors"
         ],
-        "url": "anubra266.github.io/emoji-palette/"
+        "url": "https://github.com/anubra266/emoji-palette"
     },
     {
         "id": "choc-autocomplete",
@@ -60,7 +70,7 @@
             "Autocomplete",
             "Combobox"
         ],
-        "url": "https://codesandbox.io/p/devbox/heuristic-butterfly-jrk70"
+        "url": "https://github.com/anubra266/choc-autocomplete"
     },
     {
         "id": "eslint-plugin-panda",
